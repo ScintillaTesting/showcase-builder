@@ -4,5 +4,5 @@ jobs:
   Echo-to-Console:
     runs-on: ubuntu-latest
     steps:
-        - name: Say hello
-          run: echo "Hello! 🐭"
+      - name: Say hello
+        run: echo "Hello! 🐭"
