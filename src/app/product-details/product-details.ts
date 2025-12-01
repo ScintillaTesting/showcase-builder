@@ -26,7 +26,7 @@ import { AsyncPipe, CurrencyPipe } from '@angular/common'
       >
 
       }
-      <a href="../products" class="text-amber-500 font-semibold">Back to list</a>
+      <a href="../index.html" class="text-amber-500 font-semibold">Back to list</a>
     </div>
   `,
 })
