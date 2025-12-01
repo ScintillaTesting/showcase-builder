@@ -21,21 +21,21 @@ import { environment } from '../../environments/environment'
         <tr class="even:bg-sky-100 even:text-sky-600 odd:bg-sky-200 odd:text-sky-700 group">
           <td>
             <a
-              [href]="based('/products/') + item.id"
+              [href]="based('/products/' + item.id)"
               class="group-hover:bg-amber-600 group-hover:text-amber-100 group-hover:underline block px-2"
               >{{ item.id }}</a
             >
           </td>
           <td>
             <a
-              [href]="based('/products/') + item.id"
+              [href]="based('/products/' + item.id)"
               class="group-hover:bg-amber-600 group-hover:text-amber-100 group-hover:underline block"
               >{{ item.name }}</a
             >
           </td>
           <td>
             <a
-              [href]="based('/products/') + item.id"
+              [href]="based('/products/' + item.id)"
               class="group-hover:bg-amber-600 group-hover:text-amber-100 group-hover:underline block ps-2"
               >{{ item.price }}</a
             >
