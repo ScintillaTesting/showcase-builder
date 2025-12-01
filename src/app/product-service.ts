@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http'
 import { inject, Injectable } from '@angular/core'
-import { BehaviorSubject, defer, from, map, shareReplay, Subject, switchMap, tap } from 'rxjs'
+import { defer, shareReplay, tap } from 'rxjs'
 
 interface Product {
   id: string
@@ -13,18 +13,16 @@ interface Product {
 })
 export class ProductService {
   private readonly http = inject(HttpClient)
-  private readonly source = './mock-db.json'
+  private readonly source = 'http://localhost:3000'
 
-  list = defer(() => this.http.get(this.source).pipe(
+  list = defer(() => this.http.get<Product[]>(`${this.source}/products`).pipe(
     tap(() => console.log('📦 fetched product list')),
-    map(db => (db as {products: Product[]}).products),
     shareReplay(1),
   ))
 
   product(id: string) {
-    return this.http.get(this.source).pipe(
-      tap(() => console.log('🗳️ fetch made on id', id)),
-      map(db => (db as {products: Product[]}).products.find(p => p.id === id)),
+    return this.http.get<Product>(`${this.source}/products/${id}`).pipe(
+      tap(x => console.log('🗳️ fetch made on id', id, 'gave result', x)),
       shareReplay(1),
     )
   }

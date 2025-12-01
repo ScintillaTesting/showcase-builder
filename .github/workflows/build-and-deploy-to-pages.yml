@@ -21,7 +21,7 @@ jobs:
         id: build
         run: |
           npm i
-          npm run build-for-pages
+          npx start-server-and-test "json-server --watch mock-db.json --port 3000" 3000 "npm run build-for-pages"
 
       - name: Upload static files as artifact
         id: deployment
