@@ -21,7 +21,7 @@ jobs:
         id: build
         run: |
           npm i
-          npm run build
+          npm run build-for-pages
 
       - name: Upload static files as artifact
         id: deployment
