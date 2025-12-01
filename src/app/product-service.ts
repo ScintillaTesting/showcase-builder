@@ -22,7 +22,7 @@ export class ProductService {
 
   product(id: string) {
     return this.http.get<Product>(`${this.source}/products/${id}`).pipe(
-      tap(x => console.log('🗳️ fetch made on id', id, 'gave result', x)),
+      tap(() => console.log('🗳️ fetched product', id)),
       shareReplay(1),
     )
   }

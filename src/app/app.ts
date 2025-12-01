@@ -9,7 +9,7 @@ import { RouterOutlet } from '@angular/router'
       class="bg-slate-200 w-full flex justify-center h-8 items-center gap-4 text-sky-800 font-semibold mb-8"
     >
       <a href="/">Welcome</a>
-      <a href="/products">Products</a>
+      <a href="products">Products</a>
     </nav>
     <router-outlet />
   `,
