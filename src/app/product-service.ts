@@ -13,7 +13,7 @@ interface Product {
 })
 export class ProductService {
   private readonly http = inject(HttpClient)
-  private readonly source = 'mock-db.json'
+  private readonly source = './mock-db.json'
 
   list = defer(() => this.http.get(this.source).pipe(
     tap(() => console.log('📦 fetched product list')),
