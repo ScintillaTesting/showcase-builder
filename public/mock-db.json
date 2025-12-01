@@ -1,0 +1,76 @@
+{
+    "products": [
+        {
+            "id": "001",
+            "name": "Purple Crochet Socks",
+            "category": "Clothing",
+            "price": 12.99
+        },
+        {
+            "id": "002",
+            "name": "Strawberry Earrings",
+            "category": "Jewelry",
+            "price": 8.99
+        },
+        {
+            "id": "003",
+            "name": "Hand-Painted Ceramic Mug",
+            "category": "Home Decor",
+            "price": 18.50
+        },
+        {
+            "id": "004",
+            "name": "Lavender Scented Candle",
+            "category": "Candles",
+            "price": 14.00
+        },
+        {
+            "id": "005",
+            "name": "Woven Wall Hanging",
+            "category": "Textiles",
+            "price": 35.75
+        },
+        {
+            "id": "006",
+            "name": "Beaded Bracelet",
+            "category": "Jewelry",
+            "price": 9.50
+        },
+        {
+            "id": "007",
+            "name": "Hand-Carved Wooden Spoon",
+            "category": "Kitchenware",
+            "price": 15.25
+        },
+        {
+            "id": "008",
+            "name": "Felt Flower Brooch",
+            "category": "Accessories",
+            "price": 7.99
+        },
+        {
+            "id": "009",
+            "name": "Macrame Plant Hanger",
+            "category": "Home Decor",
+            "price": 22.00
+        },
+        {
+            "id": "010",
+            "name": "Knitted Baby Hat",
+            "category": "Clothing",
+            "price": 11.75
+        },
+        {
+            "id": "011",
+            "name": "Pressed Flower Bookmark",
+            "category": "Stationery",
+            "price": 5.50
+        },
+        {
+            "id": "012",
+            "name": "Hand-Thrown Pottery Bowl",
+            "category": "Kitchenware",
+            "price": 27.80
+        }
+    ]
+}
