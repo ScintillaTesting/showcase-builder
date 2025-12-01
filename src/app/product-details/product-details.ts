@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 import { ProductService } from '../product-service'
 import { AsyncPipe, CurrencyPipe } from '@angular/common'
+import { environment } from '../../environments/environment'
 
 @Component({
   selector: 'product-details',
@@ -26,11 +27,12 @@ import { AsyncPipe, CurrencyPipe } from '@angular/common'
       >
 
       }
-      <a href="../index.html" class="text-amber-500 font-semibold">Back to list</a>
+      <a [href]="based('/products')" class="text-amber-500 font-semibold">Back to list</a>
     </div>
   `,
 })
 export class ProductDetails {
+  readonly based = environment.based
   private readonly route = inject(ActivatedRoute)
   private readonly id = this.route.snapshot.paramMap.get('id') || ''
   product$ = inject(ProductService).product(this.id)

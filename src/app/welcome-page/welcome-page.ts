@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'welcome-page',
@@ -6,10 +7,11 @@ import { Component } from '@angular/core';
   template: `
     <div class="max-w-prose pt-4 flex flex-col gap-8">
     <h1 class="text-3xl font-bold">Welcome!</h1>
-    <p>Welcome to the demo</p>
+    <h2 class="text-sky-300 text-xl">{{mode}}</h2>
+    <p>Welcome to the product SSG demo.</p>
   </div>
   `,
 })
 export class WelcomePage {
-
+  mode = environment.mode
 }
