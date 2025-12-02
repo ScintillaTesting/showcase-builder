@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 body {
   background-color: var(--color-slate-600);
@@ -15,4 +15,8 @@ app-root {
 
 a:hover {
   text-decoration: underline;
+}
+
+button {
+  @apply bg-sky-950 ring-1 ring-sky-100/70 w-fit px-3 py-2 rounded-sm cursor-pointer font-semibold active:bg-amber-800 active:text-amber-50 active:ring-amber-50 hover:text-amber-500 hover:ring-amber-500 focus:outline-none focus:ring-amber-500 focus:text-amber-500;
 }
