@@ -6,7 +6,7 @@ status=$(curl -s -o /dev/null -w "%{http_code}" -L \
   -H "Authorization: Bearer $GITHUB_TOKEN" \
   -H "X-GitHub-Api-Version: 2022-11-28" \
   https://api.github.com/repos/ScintillaTesting/showcase-builder/actions/workflows/web-ping.yml/dispatches \
-  -d '{"ref":"actions-experiment","inputs":{}}')
+  -d '{"ref":"main","inputs":{}}')
 echo "got status: $status"
 if [[ "$status" -ge 200 && "$status" -lt 300 ]]; then
     echo "✔️📬 POST request to action succeeded with status $status"
