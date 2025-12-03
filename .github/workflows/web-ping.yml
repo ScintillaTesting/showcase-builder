@@ -11,3 +11,5 @@ jobs:
           curl -X POST "${{ secrets.DISCORD_WEBHOOK }}" \
           -H 'Content-Type: application/json' \
           -d '{"content": "Hello, Discord!", "username": "HiBot"}'
+      - name: Say bye
+        run: echo "Bye now~ 🐭"
