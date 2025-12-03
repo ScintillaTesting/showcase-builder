@@ -6,6 +6,9 @@ jobs:
     steps:
       - name: Say hello
         run: echo "Hello! 🐭"
+      - name: Check secret length
+        run: |
+          echo "URL length: ${#${{ secrets.DISCORD_WEBHOOK }}}"
       - name: Echo to Discord
         run: |
           curl -X POST "${{ secrets.DISCORD_WEBHOOK }}" \
