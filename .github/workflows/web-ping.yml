@@ -6,3 +6,8 @@ jobs:
     steps:
       - name: Say hello
         run: echo "Hello! 🐭"
+      - name: Echo to Discord
+        run: |
+          curl -X POST "${{ secrets.DISCORD_WEBHOOK }}" \
+          -H 'Content-Type: application/json' \
+          -d '{"content": "Hello, Discord!", "username": "HiBot"}'
